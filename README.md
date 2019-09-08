@@ -3,6 +3,13 @@
 ## Table of contents:
 
 - Sorting
+    - Insertion sort
+    - Selection sort
+    - Merge sort
+    - Quick sort
+- Order Statistics
+    - Randomized selection
+    
 ...
 
 ## References
