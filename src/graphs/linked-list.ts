@@ -94,6 +94,47 @@ export default class LinkedList<T> {
         return null;
     }
 
+    deleteTail() {
+        const deletedTail = this.tail;
+
+        if (this.head === this.tail) {
+            this.head = null;
+            this.tail = null;
+
+            return deletedTail;
+        }
+
+        let currentNode = this.head;
+        while (currentNode!.next) {
+            if (!currentNode!.next.next) {
+                currentNode!.next = null;
+            } else {
+                currentNode = currentNode!.next;
+            }
+        }
+
+        this.tail = currentNode;
+
+        return deletedTail;
+    }
+
+    deleteHead() {
+        if (!this.head) {
+            return null;
+        }
+
+        const deletedHead = this.head;
+
+        if (this.head.next) {
+            this.head = this.head.next;
+        } else {
+            this.head = null;
+            this.tail = null;
+        }
+
+        return deletedHead;
+    }
+
     toArray(): LinkedListNode<T>[] {
         const nodes: LinkedListNode<T>[] = [];
 

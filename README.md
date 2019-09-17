@@ -11,7 +11,7 @@
     - Randomized selection
 - Graphs
     - DFS
-    
+    - BFS
 ...
 
 ## References
