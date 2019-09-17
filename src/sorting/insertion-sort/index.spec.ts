@@ -1,7 +1,7 @@
-import {insertionSort} from "./index.js";
+import {insertionSort} from "./";
 import * as assert from 'assert';
 
-describe('insertionSort', () => {
+describe('InsertionSort', () => {
     it('should order and array of number in ascending order', () => {
         const array = [3, 2, 51, 5, 1, 12];
         assert.deepStrictEqual(insertionSort(array), [1, 2, 3, 5, 12, 51]);

@@ -9,6 +9,8 @@
     - Quick sort
 - Order Statistics
     - Randomized selection
+- Graphs
+    - DFS
     
 ...
 

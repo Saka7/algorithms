@@ -2,7 +2,7 @@ import * as assert from 'assert';
 
 import {selectionSort} from "./index";
 
-describe('selectionSort', () => {
+describe('SelectionSort', () => {
     it('should return sorted array', () => {
         const array = [4, 2, 1, 51, 5];
         assert.deepStrictEqual(selectionSort(array), [1, 2, 4, 5, 51]);

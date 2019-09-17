@@ -4,7 +4,7 @@ import Vertex from '../vertex';
 import Edge from '../edge';
 import depthFirstSearch from './';
 
-describe('depthFirstSearch', () => {
+describe('DepthFirstSearch', () => {
     it('should perform DFS operation on graph', () => {
         const graph = new Graph<string>(true);
 

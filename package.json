@@ -1,16 +1,14 @@
 {
-  "name": "introduction-to-algorithms",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "typescript-algorithms",
+  "version": "0.0.1",
+  "description": "General CS algorithms implementation in TypeScript",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-mocha -p tsconfig.json src/**/*.spec.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Saka7",
+  "license": "MIT",
   "devDependencies": {
-    "@types/expect": "^1.20.4",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.3",
     "mocha": "^6.1.4",
