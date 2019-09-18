@@ -37,6 +37,17 @@ export default class LinkedList<T> {
         return this;
     }
 
+    prepend(value: T): LinkedList<T> {
+        const newNode = new LinkedListNode(value, this.head);
+        this.head = newNode;
+
+        if (!this.tail) {
+            this.tail = newNode;
+        }
+
+        return this;
+    }
+
     delete(value: T) {
         if (!this.head) {
             return null;
