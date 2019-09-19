@@ -1,6 +1,6 @@
 import Queue from '../queue';
-import Graph from "../graph";
-import Vertex from "../vertex";
+import Graph from '../graph';
+import Vertex from '../vertex';
 
 export interface BfsTraversal<T> {
     nextVertex: Vertex<T>;

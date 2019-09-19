@@ -13,6 +13,7 @@
     - DFS (Depth-first search)
     - BFS (Breath-first search)
     - SCC (Strongly-connected components)
+    - Topological ordering
 ...
 
 ## References
