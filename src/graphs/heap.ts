@@ -72,15 +72,53 @@ export default class Heap<T> {
         const item = this.heapContainer[0];
 
         this.heapContainer[0] = this.heapContainer.pop() as T;
-        this.heapifyDown();
+        this.bubbleDown();
 
         return item;
     }
 
     add(item: T): Heap<T> {
         this.heapContainer.push(item);
-        this.heapifyUp();
+        this.bubbleUp();
         return this;
+    }
+
+    remove(item: T): Heap<T> {
+        const numberOfItemsToRemove = this.find(item).length;
+
+        for (let iteration = 0; iteration < numberOfItemsToRemove; iteration++) {
+            const indexToRemove = this.find(item).pop() as number;
+            if (indexToRemove === (this.heapContainer.length - 1)) {
+                this.heapContainer.pop();
+            } else {
+                this.heapContainer[indexToRemove] = this.heapContainer.pop() as T;
+                const parentItem = this.parent(indexToRemove);
+                if (
+                    this.hasLeftChild(indexToRemove)
+                    && (
+                        !parentItem
+                        || this.pairIsInCorrectOrder(parentItem, this.heapContainer[indexToRemove])
+                    )
+                ) {
+                    this.bubbleUp(indexToRemove);
+                } else {
+                    this.bubbleDown(indexToRemove);
+                }
+            }
+        }
+        return this;
+    }
+
+    find(item: T): number[] {
+        const foundItemIndices = [];
+
+        for (let itemIndex = 0; itemIndex < this.heapContainer.length; itemIndex++) {
+            if (this.type === 'min' ? item < this.heapContainer[itemIndex] : item >= this.heapContainer[itemIndex]) {
+                foundItemIndices.push(itemIndex);
+            }
+        }
+
+        return foundItemIndices;
     }
 
     isEmpty(): boolean {
@@ -91,7 +129,7 @@ export default class Heap<T> {
         return this.heapContainer.toString();
     }
 
-    heapifyUp(customStartIndex?: number) {
+    bubbleUp(customStartIndex?: number) {
         let currentIndex = customStartIndex || this.heapContainer.length - 1;
 
         while (
@@ -103,7 +141,7 @@ export default class Heap<T> {
         }
     }
 
-    heapifyDown(customStartIndex = 0) {
+    bubbleDown(customStartIndex = 0) {
         let currentIndex = customStartIndex;
         let nextIndex = null;
 

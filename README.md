@@ -12,6 +12,7 @@
 - Graphs
     - DFS (Depth-first search)
     - BFS (Breath-first search)
+    - Dijkstra
     - SCC (Strongly-connected components)
     - Topological ordering
 ...
