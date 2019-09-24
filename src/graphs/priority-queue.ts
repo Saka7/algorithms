@@ -8,8 +8,8 @@ export default class PriorityQueue<T> extends Heap<T> {
         this.priorities = new Map();
     }
 
-    add(item: T, priority = 0): PriorityQueue<T> {
-        this.priorities.set(item, priority);
+    add(item: T, priority: number | null | undefined = 0): PriorityQueue<T> {
+        this.priorities.set(item, priority!);
         super.add(item);
         return this;
     }
@@ -24,5 +24,13 @@ export default class PriorityQueue<T> extends Heap<T> {
         this.remove(item);
         this.add(item, priority);
         return this;
+    }
+
+    findByValue(item: T): number[] {
+        return this.find(item);
+    }
+
+    hasValue(item: T): boolean {
+        return this.findByValue(item).length > 0;
     }
 }
