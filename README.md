@@ -15,6 +15,8 @@
     - Dijkstra
     - SCC (Strongly-connected components)
     - Topological ordering
+- Hash Tables
+- Bloom Filters
 ...
 
 ## References
