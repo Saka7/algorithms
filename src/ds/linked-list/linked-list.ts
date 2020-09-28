@@ -16,9 +16,13 @@ export default class LinkedList<T> {
     public head: LinkedListNode<T> | null;
     public tail: LinkedListNode<T> | null;
 
-    constructor() {
+    constructor(values: T[]) {
         this.head = null;
         this.tail = null;
+
+        if (values.length) {
+            this.appendAll(values);
+        }
     }
 
     append(value: T) {
@@ -37,6 +41,11 @@ export default class LinkedList<T> {
         return this;
     }
 
+    appendAll(values: T[]): LinkedList<T>{
+        values.forEach(v => this.append(v));
+        return this;
+    }
+
     prepend(value: T): LinkedList<T> {
         const newNode = new LinkedListNode(value, this.head);
         this.head = newNode;
@@ -45,6 +54,11 @@ export default class LinkedList<T> {
             this.tail = newNode;
         }
 
+        return this;
+    }
+
+    prependAll(values: T[]): LinkedList<T> {
+        values.forEach(this.prepend);
         return this;
     }
 
@@ -146,7 +160,7 @@ export default class LinkedList<T> {
         return deletedHead;
     }
 
-    toArray(): LinkedListNode<T>[] {
+    toNodesArray(): LinkedListNode<T>[] {
         const nodes: LinkedListNode<T>[] = [];
 
         let currentNode = this.head;
@@ -158,7 +172,19 @@ export default class LinkedList<T> {
         return nodes;
     }
 
+    toArray(): T[] {
+        const values: Array<T> = [];
+
+        let currentNode = this.head;
+        while (currentNode) {
+            values.push(currentNode.value);
+            currentNode = currentNode.next;
+        }
+
+        return values;
+    }
+
     toString(callback: (t: T) => string): string {
-        return this.toArray().map(node => node.toString(callback)).toString();
+        return this.toNodesArray().map(node => node.toString(callback)).toString();
     }
 }
