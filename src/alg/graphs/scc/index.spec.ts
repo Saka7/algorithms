@@ -1,7 +1,7 @@
 import {strictEqual} from 'assert';
-import Vertex from "../vertex";
-import Edge from "../edge";
-import Graph from "../graph";
+import Vertex from "../../../ds/graphs/vertex";
+import Edge from "../../../ds/graphs/edge";
+import Graph from "../../../ds/graphs/graph";
 import stronglyConnectedComponents from "./index";
 
 describe('StronglyConnectedComponents', () => {

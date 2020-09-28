@@ -1,4 +1,4 @@
-import LinkedList from './linked-list';
+import LinkedList from '../linked-list/linked-list';
 
 export default class Queue<T> {
     public linkedList: LinkedList<T>;

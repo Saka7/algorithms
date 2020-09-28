@@ -1,4 +1,4 @@
-import LinkedList from './linked-list';
+import LinkedList from '../linked-list/linked-list';
 import Edge from "./edge";
 
 export default class Vertex<T> {

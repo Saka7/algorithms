@@ -1,6 +1,6 @@
-import Graph from "../graph";
-import Stack from "../stack";
-import Vertex from "../vertex";
+import Graph from "../../../ds/graphs/graph";
+import Stack from "../../../ds/stack/stack";
+import Vertex from "../../../ds/graphs/vertex";
 import depthFirstSearch from "../dfs";
 
 export default function topologicalSort<T>(graph: Graph<T>) {

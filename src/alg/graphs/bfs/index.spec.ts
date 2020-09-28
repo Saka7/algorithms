@@ -1,11 +1,11 @@
 import {deepStrictEqual, strictEqual} from 'assert';
-import Graph from '../graph'
-import Vertex from '../vertex';
-import Edge from '../edge';
-import depthFirstSearch from './';
+import Graph from '../../../ds/graphs/graph'
+import Vertex from '../../../ds/graphs/vertex';
+import Edge from '../../../ds/graphs/edge';
+import breadthFirstSearch from './index';
 
-describe('DepthFirstSearch', () => {
-    it('should perform DFS operation on graph', () => {
+describe('BreadthFirstSearch', () => {
+    it('should perform BFS operation on graph', () => {
         const graph = new Graph<string>(true);
 
         const vertexA = new Vertex('A');
@@ -40,7 +40,7 @@ describe('DepthFirstSearch', () => {
         let enterCount = 0;
         let leaveCount = 0;
 
-        depthFirstSearch(graph, vertexA, {
+        breadthFirstSearch(graph, vertexA, {
             enterVertex: () => enterCount++,
             leaveVertex: () => leaveCount++,
         });

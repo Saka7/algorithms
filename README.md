@@ -2,22 +2,29 @@
 
 ## Table of contents:
 
-- Sorting
-    - Insertion sort
-    - Selection sort
-    - Merge sort
-    - Quick sort
-- Order Statistics
-    - Randomized selection
-- Graphs
-    - DFS (Depth-first search)
-    - BFS (Breath-first search)
-    - Dijkstra
-    - SCC (Strongly-connected components)
-    - Topological ordering
-- Hash Tables
-- Bloom Filters
-...
+- Data Structures
+    - [Linked List](/src/ds/linked-list)
+    - [Queue](/src/ds/queue)
+    - [Priority Queue](/src/ds/priority-queue)
+    - [Heap](/src/ds/heap)
+    - [Stack](/src/ds/stack)
+    - [Hash Table](/src/ds/hash-table)
+    - [Graph](/src/ds/graphs)
+    - [Bloom Filter](/src/ds/bloom-filter)
+- Algorithms
+    - Sorting
+        - [Insertion sort](/src/alg/sorting/insertion-sort)
+        - [Selection sort](/src/alg/sorting/selection-sort)
+        - [Merge sort](/src/alg/sorting/merge-sort)
+        - [Quick sort](/src/alg/sorting/quick-sort)
+    - Order Statistics
+        - [Randomized selection](/src/alg/selection/order-statistics)
+    - Graphs
+        - [DFS (Depth-first search)](/src/alg/graphs/dfs)
+        - [BFS (Breath-first search)](/src/alg/graphs/bfs)
+        - [Dijkstra](/src/alg/graphs/dijkstra)
+        - [SCC (Strongly-connected components)](/src/alg/graphs/scc)
+        - [Topological ordering](/src/alg/graphs/topological-ordering)
 
 ## References
 - [Stanford > Algorithms: Design and Analysis, Part 1](https://lagunita.stanford.edu/courses/course-v1:Engineering+Algorithms1+SelfPaced/about)

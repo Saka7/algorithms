@@ -1,4 +1,4 @@
-import {insertionSort} from "./";
+import {insertionSort} from "./index";
 import * as assert from 'assert';
 
 describe('InsertionSort', () => {

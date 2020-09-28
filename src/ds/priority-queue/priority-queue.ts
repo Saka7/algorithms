@@ -1,4 +1,4 @@
-import Heap from "./heap";
+import Heap from "../heap/heap";
 
 export default class PriorityQueue<T> extends Heap<T> {
     public priorities: Map<T, number>;

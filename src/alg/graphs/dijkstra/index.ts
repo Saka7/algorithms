@@ -1,6 +1,6 @@
-import Graph from '../graph';
-import Vertex from '../vertex';
-import PriorityQueue from "../priority-queue";
+import Graph from '../../../ds/graphs/graph';
+import Vertex from '../../../ds/graphs/vertex';
+import PriorityQueue from "../../../ds/priority-queue/priority-queue";
 
 export type Distance = {[key: string]: null | number};
 export type VertexMap<T> = {[key: string]: Vertex<T> | null};

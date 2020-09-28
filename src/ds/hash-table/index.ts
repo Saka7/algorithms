@@ -1,4 +1,4 @@
-import LinkedList from "../graphs/linked-list";
+import LinkedList from "../linked-list/linked-list";
 
 export default class HashTable<V> {
     public buckets: LinkedList<{[key: string]: V}>[];

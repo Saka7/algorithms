@@ -1,7 +1,7 @@
 import depthFirstSearch from '../dfs';
-import Graph from "../graph";
-import Stack from "../stack";
-import Vertex from "../vertex";
+import Graph from "../../../ds/graphs/graph";
+import Stack from "../../../ds/stack/stack";
+import Vertex from "../../../ds/graphs/vertex";
 
 function getVerticesSortedByDfsFinishTime<T>(graph: Graph<T>) {
     const visitedVerticesSet: {[key: string]: Vertex<T>} = {};

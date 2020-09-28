@@ -1,5 +1,5 @@
-import Vertex from '../vertex';
-import Graph from '../graph';
+import Vertex from '../../../ds/graphs/vertex';
+import Graph from '../../../ds/graphs/graph';
 
 export interface DfsTraversal<T> {
     nextVertex: Vertex<T>;
